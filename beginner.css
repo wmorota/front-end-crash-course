@@ -1,0 +1,59 @@
+/* CSS stands for Cascading Style Sheets
+   It is a language for providing style to HTML elements - make it look better and fancier
+
+   CSS can be defined inside of an HTML document with the <style> tag
+   or in it's own separate CSS file like this one :)
+*/
+
+/* start of css rule-set */
+body { /* this "body" is called a selector */
+
+/* what's inside a selector is called a declaration */
+
+      /* property     : value */
+      background-color: gray ;
+      font-size: 80px;
+}
+/* end of css-rule set */
+
+div {
+      color: green;
+}
+
+.class { /* this is a class */
+    text-align: center;
+}
+
+#id {  /* this is an id */
+    color: red;
+    font-weight: 900;
+}
+
+/* CSS provides 2 units to define a length: absolute and relative
+    Absolute Units are FIXED units, thus will NOT change between different screen sizes
+                  Ex: cm, mm, in, px, pt,
+
+    Relative Units are relative to another property, thus WILL CHANGE between different
+    screens automatically
+                  Ex: %, em, rem, vw, vh, vmin, vmax
+*/
+
+/* You can put have multiple selectors with the same declaration */
+h1, h6
+{
+    color: blue;
+}
+
+/* CSS allows you to animate HTML elements through both the animation and transition property
+        The animation property, along with keyframes allows you to create more complex animations
+
+        The transition property allows you to transition between 2 different CSS values
+*/
+
+/* CSS Media Queries allows you to define specific rulesets for different screen sizes (Responsive CSS).
+   Allows a page to adapt accordingly to varying screen sizes.
+*/
+
+@media only screen and (min-width: 650px) {
+  /* rule-sets in here */
+}

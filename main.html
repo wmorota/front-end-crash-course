@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title> Example Web Page </title>
+  <link href="style.css" rel="stylesheet" type="text/css">
+
+  <!-- This is how you set your web page's tab icon (aka favicon) -->
+  <link rel="icon" href="images/logo.png"  type="image/png">
+
+  <!-- This is how you link and use a Google font into your web page -->
+  <link href="https://fonts.googleapis.com/css?family=Dosis" rel="stylesheet">
+
+</head>
+<body>
+<div class="container">
+  <header>
+  <a href="https://www.google.com/"> <!-- use a tag for any sort of links -->
+  <img class="logo" src="images/logo.png" alt="Logo" width="80px" height="80px">
+  </a>
+
+<nav>
+  <a class="hide-desktop" href="#">  <!-- we would need this first since focus is on mobile-first CSS -->
+  <img class="menu" id="menu" src="images/ham.svg" alt="Hamburger Icon">
+  </a>
+
+  <!-- with the show-desktop and hide-desktop classes, we can show the nav bar just on desktop
+       and hide it when on mobile as it'll use the hamburger list -->
+  <ul class="show-desktop hide-desktop" id="nav">
+    <li class="exit-btn hide-desktop" id="exit"> <img src="images/exit.svg" alt="Exit Menu"> </li>
+    <li> <a href="#">HOME</a> </li>
+    <li> <a href="#">SERVICES</a> </li>
+    <li> <a href="#">ABOUT</a> </li>
+    <li> <a href="#">CONTACT</a> </li>
+  </ul>
+</nav>
+</header>
+
+<div>
+  <img src="images/server.svg" alt="Server Graphic" class="server">
+  <h1 class="center">Front-End Development Crash Course</h1>
+  <p class="subhead center"> A Beginner's Guide / Refresher to HTML, CSS, and JavaScript!</p>
+  <img src="images/scroll.svg" alt="Scroll Down" class="scroll hide-mobile show-desktop">
+</div>
+
+<!-- closed in this div container because the next div container will require to go out of it -->
+</div>
+
+<div class="blue-container">
+  <div class="container">
+    <ul>
+      <li>
+        <img src="images/icon-1.svg" alt="Calendar Icon">
+        <!-- used a different kind of Lorem Ipsum : Web 2.0 Ipsum LOL -->
+        <p> Spotify kno zlio elgg klout, wufoo qeyno koofers wikia, napster squidoo dogster.</p>
+      </li>
+
+      <li>
+        <img src="images/icon-2.svg" alt="Wallet Icon">
+        <!-- used a different kind of Lorem Ipsum : Web 2.0 Ipsum LOL -->
+        <p> Tivo mzinga blippy palantir ngmoco rovio, kippt dogster zanga vuvox wesabe elgg, tivo quora eskobo greplin.</p>
+      </li>
+
+      <li>
+        <img src="images/icon-3.svg" alt="Phone Icon">
+        <!-- used a different kind of Lorem Ipsum : Web 2.0 Ipsum LOL -->
+        <p> Airbnb zinch akismet kosmix foodzie, groupon jajah. Meebo tumblr skype joukuu blippy, quora voki twones.</p>
+      </li>
+    </ul>
+  </div>
+</div>
+
+<div class="gray-container">
+  <div class="container">
+    <ul>
+      <li>
+        <figure> <!-- use figure when you have an image of a person then a quote from said person -->
+        <img src="images/user1.png" alt="User 1">
+        <!-- This is the quote -->
+        <blockquote> Weebly zoosk oovoo etsy scribd, reddit scribd yuntaa. Kiko bebo jiglu insala kosmix heekya, orkut jiglu whrrl. </blockquote>
+        <!-- This is name of person saying quote -->
+        <figcaption>- Jane Doe</figcaption>
+      </figure>
+      </li>
+
+      <li>
+        <figure>
+        <img src="images/user2.png" alt="User 2">
+        <blockquote> Octopart squidoo heroku eduvant imeem, woopra plaxo. Joukuu oooj movity jiglu gooru joost chartly meebo, zappos joost knewton blippy eskobo kippt. </blockquote>
+        <figcaption>- John Doe </figcaption>
+      </figure>
+      </li>
+
+    </ul>
+  </div>
+</div>
+
+<!-- div with header and button -->
+<div class="container">
+  <h1 class="center">Start your free trial now! </h1>
+  <a href="#" class="cta">Get Started</a>
+</div>
+
+<footer>
+  <div class="footer-container">
+    <div class="container">
+      <a href="#"> <img src="images/logo-white.png" alt="White Logo" class="logo" width="80px" height="80px"> </a>
+      <p class="address">Knowledge is Power! </p>
+
+      <ul class="footer-links">
+        <li>
+          <a href="#"> Terms of Service</a>
+        </li>
+
+        <li>
+          <a href="#"> Privacy Policy</a>
+        </li>
+
+      </ul>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

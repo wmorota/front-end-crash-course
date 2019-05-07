@@ -1,10 +1,196 @@
 /* External CSS file for main.html */
+/* Focused on Mobile-First CSS */
 
-body{
+body {
     font-family: 'Dosis', sans-serif;
+    margin: 0;
 }
 
-.center
-{
-  text-align: center; 
+p, blockquote {
+  /* default size of these are about 16px = 1em
+  When working with font sizes try to use em or rem units */
+  font-size: .9em;
+  line-height: 1.5em; /* Increases line-height between lines */
+}
+
+ul {
+  list-style-type: none; /* removes the bullet dot for unordered lists */
+
+  /* because we want to control these ourselves */
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  text-align: center;
+  padding: .8em 1.2em;
+}
+
+.logo {
+  width: 80px;
+  height: 80px;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.menu {
+  margin-top: 120%;
+  width: 180%;
+}
+
+.server {
+  margin-top: 5%;
+}
+
+.hide-mobile{
+  display: none;
+}
+
+h1, .subhead {
+  position: relative;
+  z-index: 3;
+}
+
+.subhead {
+  font-size: 1em;
+}
+
+/* Creates the curve and skewed design for the blue-container div */
+.blue-container {
+  width: 100%;
+  background-color: #00C2FF;
+  color: white;
+  margin-top: 2%;
+  padding-top: 2%;
+  padding-bottom: 1%;
+  border-top-left-radius: 40px;
+  transform: skewY(-2deg);
+}
+
+.blue-container:before {
+  content: "";
+  width: 40px;
+  height: 40px;
+  background-color: #00C2FF;
+  position: absolute; /* by setting the position to absollute, you can pretyy much move it around */
+  top: -39px;
+  right: 0;
+  z-index: -2;
+}
+
+.blue-container:after {
+  content: "";
+  width: 80px;
+  height: 80px;
+  background-color: white;
+  position: absolute;
+  top: -80px;
+  right: 0px;
+  border-radius: 50%;
+  z-index: -1;
+}
+
+/* helps to un-skew the contents of the container */
+.blue-container ul {
+transform: skewY(2deg);
+}
+
+/* creates space in between the bottom of each list item */
+.blue-container ul li {
+  margin-bottom: 3em;
+}
+
+/* decreases the size for all 3 icons */
+.blue-container img {
+  width: 10%;
+}
+
+/* since the 3rd icon (phone) is a veetical image it's size is
+   different, this helps decrease it to the correcr size */
+.blue-container ul li:nth-child(3) img {
+  width: 6% ;
+}
+
+
+.gray-container {
+  background-color: #F6F6F6 ;
+  margin-top: -3%; /* takes out the white space create from the skewed blue-container */
+  padding-top: 5%;
+}
+
+.gray-container ul li:nth-child(2) {
+  padding-top: 3%;
+}
+
+figcaption {
+  font-weight: bold;
+  color: #00C2FF;
+}
+
+/* Get Started Button */
+.cta {
+  background-color: #00CC80;
+  width: calc(100% - 1em) ;
+  display: block;
+  color: white;
+  border-radius: 20px;
+  padding: .5em;
+  text-decoration: none; /* This takes off the underline at the bottom of links */
+  font-size: 1.5em;
+  position: relative;
+  z-index: 4;
+  margin-bottom: 8%;
+}
+
+.footer-container {
+  width: 100%;
+  background-color: #3D444A;
+  color: white;
+  padding: 3em 0;
+  border-top-right-radius: 40px;
+  transform: skewY(2deg);
+}
+
+.footer-container:before {
+  content: "";
+  width: 40px;
+  height: 40px;
+  background-color: #3D444A;
+  position: absolute; /* by setting the position to absollute, you can pretyy much move it around */
+  top: -39px;
+  left: 0;
+  z-index: -2;
+
+}
+
+.footer-container:after {
+  content: "";
+  width: 80px;
+  height: 80px;
+  background-color: white; /* this is a circle that creates the curve */
+  position: absolute;
+  top: -80px;
+  left: 0px;
+  border-radius: 50%;
+  z-index: -1;
+}
+
+.footer-container .container {
+  transform: skewY(-2deg);
+}
+
+.footer-links {
+  margin: 0 auto ;
+}
+
+.footer-links li {
+  display: inline-block; /* makes elements go side by side */
+}
+
+.footer-links li a {
+  color: #9D9D9D;
+  font-size: .8em;
 }

@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <title> Example Web Page </title>
   <link href="style.css" rel="stylesheet" type="text/css">
 
@@ -96,29 +98,42 @@
 
 <!-- div with header and button -->
 <div class="container">
-  <h1>Start your free trial now! </h1>
-  <a href="#" class="cta">Get Started</a>
+    <h2>Start your free trial now!</h2>
+    <a href="#" class="cta">Get Started</a>
 </div>
 
 <footer>
-  <div class="footer-container">
-    <div class="container">
-      <a href="#"> <img src="images/logo-white.png" alt="White Logo" class="logo" width="80px" height="80px"> </a>
-      <p class="address">You have to believe it before you see it </p>
-
-      <ul class="footer-links">
-        <li>
-          <a href="#"> Terms of Service</a>
-        </li>
-
-        <li>
-          <a href="#"> Privacy Policy</a>
-        </li>
-
-      </ul>
+    <div class="footer-container">
+        <div class="container">
+            <a href="#">
+                <img src="images/logo-white.png" class="logo" alt="logo">
+            </a>
+            <p class="address">You have to believe it before you see it</p>
+            <ul class="footer-links">
+                <li><a href="#">Terms of Service</a></li>
+                <li><a href="#">Privacy Policy</a></li>
+            </ul>
+        </div>
     </div>
-  </div>
 </footer>
+
+<script type="text/javascript">
+var menu = document.getElementById('menu');
+var nav = document.getElementById('nav');
+var exit = document.getElementById('exit');
+
+menu.addEventListener('click', function(e) {
+    nav.classList.toggle('hide-mobile'); // removes hide-mobile class
+    e.preventDefault();
+});
+
+exit.addEventListener('click', function(e) {
+    nav.classList.add('hide-mobile'); // adds hide-mobile class
+    e.preventDefault();
+});
+
+
+</script>
 
 </body>
 </html>
